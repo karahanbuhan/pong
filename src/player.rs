@@ -2,10 +2,10 @@ use bevy::prelude::*;
 
 use crate::TILE_SIZE;
 
-pub struct PlayerPlugin;
-
 #[derive(Component)]
 pub struct Player {}
+
+pub struct PlayerPlugin;
 
 impl Plugin for PlayerPlugin {
     fn build(&self, app: &mut App) {
@@ -37,6 +37,11 @@ fn spawn_player(mut commands: Commands) {
                 custom_size: Some(Vec2::new(10.0 * TILE_SIZE, 100.0 * TILE_SIZE)),
                 ..default()
             },
+            ..default()
+        })
+        .insert(SpatialBundle {
+            transform: Transform::from_translation(Vec3::new(-350.0, 0.0, 0.0)),
+            visibility: Visibility { is_visible: true },
             ..default()
         })
         .insert(Name::new("Player"))

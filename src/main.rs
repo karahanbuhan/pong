@@ -1,7 +1,9 @@
 use bevy::prelude::*;
 
+use crate::ball::BallPlugin;
 use crate::player::PlayerPlugin;
 
+mod ball;
 mod player;
 
 pub const TILE_SIZE: f32 = 1.0;
@@ -20,6 +22,7 @@ fn main() {
             ..default()
         }))
         .add_plugin(PlayerPlugin)
+        .add_plugin(BallPlugin)
         .add_startup_system(spawn_camera)
         .run();
 }
