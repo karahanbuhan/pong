@@ -1,9 +1,9 @@
 [package]
 name = "pong"
 version = "0.1.0"
-authors = ["Karahan Buhan"]
+authors = ["Karahan Buhan <contact@karahanbuhan.com>"]
 edition = "2021"
-description = "Multiplayer pong game running on web"
+description = "The classic pong game"
 readme = "https://github.com/karahanbuhan/pong/blob/master/README.md"
 repository = "https://github.com/karahanbuhan/pong"
 license = "MIT License"
